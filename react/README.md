@@ -6,5 +6,5 @@ This folder consists various frontend projects with collaboration of different 3
 
 ## Current project list: 
 
-- To-Do List using css / scss
+- To-Do List using css / scss [Here](https://github.com/MandaliyaPruthvi/frontend-projects/tree/master/react/todo-list)
 - To-Do List using Tailwind.css (Upcoming)
