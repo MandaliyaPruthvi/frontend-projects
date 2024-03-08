@@ -50,6 +50,7 @@ const EditToDoListView = () => {
             console.log("error while submitting form: ", e);
         }
         setShowLink(true);
+        setShowError(false);
     }
 
     return (
@@ -75,7 +76,7 @@ const EditToDoListView = () => {
                 </form>
                 <br />
                 {showLink && <h4><a href="/">View Updated to-do list</a></h4>}
-                {showError && <h4><a href="/">Please update your to-do</a></h4>}
+                {showError && <h3 className="error_text">Please update your to-do</h3>}
             </div>
         </div>
     );
