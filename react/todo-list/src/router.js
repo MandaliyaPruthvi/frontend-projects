@@ -1,32 +1,27 @@
 import React from "react";
 import { createBrowserRouter } from "react-router-dom";
+import App from "./App";
 import { ShowToDoListView, EditToDoListView, AddToDoListView } from './views';
-import Header from "./components/header/Header";
 
 const router = createBrowserRouter([
     {
         path: '/',
-        element: <>
-            <Header />
-            <ShowToDoListView />
-        </>
+        element: <App />,
+        children: [
+            {
+                path: '/',
+                element: <ShowToDoListView />
+            },
+            {
+                path: '/edit',
+                element: <EditToDoListView />
+            },
+            {
+                path: '/add',
+                element: <AddToDoListView />
+            }
+        ],
     },
-    {
-        path: '/edit',
-        element:
-            <>
-                <Header />
-                <EditToDoListView />
-            </>
-    },
-    {
-        path: '/add',
-        element:
-            <>
-                <Header />
-                <AddToDoListView />
-            </>
-    }
 ]);
 
 export default router;

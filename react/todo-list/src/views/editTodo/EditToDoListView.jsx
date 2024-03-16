@@ -1,6 +1,5 @@
 import React, { useState } from "react";
-import { useLocation } from 'react-router-dom';
-import './EditToDoListStyles.css';
+import { useLocation, Link } from 'react-router-dom';
 
 const EditToDoListView = () => {
     // Edit
@@ -54,15 +53,16 @@ const EditToDoListView = () => {
     }
 
     return (
-        <div className="add-container">
-            <h1>
+        <div className="flex flex-col justify-center items-center p-16">
+            <h1 className="text-xl font-extrabold">
                 Edit To-Do
             </h1>
-            <div className="form-container">
-                <h3>Update your to-do here: </h3>
+            <div className="flex flex-col justify-center items-center bg-orange-300 shadow-lg rounded-2xl border-2 border-solid border-black px-24 py-12 mt-4 dark:bg-gray-300">
+                <h3 className="text-xl font-bold">Update your to-do here: </h3>
                 <form onSubmit={handleOnSubmit}>
-                    <div className="form-container_input_container">
+                    <div >
                         <input 
+                            className="py-2 pr-8 pl-2 mt-4" 
                             type="text" 
                             name="todoValue" 
                             id="todoValue" 
@@ -70,13 +70,13 @@ const EditToDoListView = () => {
                             onChange={handleTodoChange}
                             defaultValue={todoValue.description}/>
                     </div>
-                    <div className="form-container_submit_container">
-                        <button type="submit">Update</button>
+                    <div className="flex justify-center">
+                        <button className="flex text-white py-3 px-7 mt-6 bg-orange-500 rounded-xl dark:bg-gray-900" type="submit">Update</button>
                     </div>
                 </form>
                 <br />
-                {showLink && <h4><a href="/">View Updated to-do list</a></h4>}
-                {showError && <h3 className="error_text">Please update your to-do</h3>}
+                {showLink && <h4 className="font-bold underline text-lg"><Link to="/">View Updated to-do list</Link></h4>}
+                {showError && <h3 className="text-red-800 font-bold">Please update your to-do</h3>}
             </div>
         </div>
     );
