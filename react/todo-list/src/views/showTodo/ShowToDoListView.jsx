@@ -1,5 +1,6 @@
 import React, {useState} from 'react';
 import { useNavigate } from "react-router-dom";
+import { BiEditAlt, BiTrash  } from "react-icons/bi";
 import './ShowToDoListStyles.css';
 
 const ShowToDoListView = () => {
@@ -43,13 +44,18 @@ const ShowToDoListView = () => {
                                 return (
                                     <div key={element.id} className='show-container_list_styles'>
                                         <h3>{element.description}</h3>
-                                        <div>
-                                            <button onClick={() => {
+                                        <div className="button-container">
+                                            <div onClick={() => {
                                                 handleEdit(element)
-                                            }}>Edit</button>
-                                            <button onClick={() => {
+                                            }} className="button-element">
+                                                <BiEditAlt />
+                                            </div>
+
+                                            <div onClick={() => {
                                                 handleDelete(element)
-                                            }}>Delete</button>
+                                            }} className="button-element">
+                                                <BiTrash />
+                                            </div>
                                         </div>
                                     </div>
                                 )

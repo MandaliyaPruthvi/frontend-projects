@@ -44,3 +44,12 @@
     flex-direction: row;
     justify-content: space-between;
 }
+
+.button-container {
+    display: flex;
+    flex-direction: row;
+}
+
+.button-element {
+    font-size: 26px;
+}
