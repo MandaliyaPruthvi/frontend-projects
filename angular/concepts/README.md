@@ -31,3 +31,5 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 
 - Search input with asynchronous loading indicator and deboucing with receiving distinct input only [Here](https://github.com/MandaliyaPruthvi/frontend-projects/tree/master/angular/concepts/src/app/screens/search-screen)
 
+Ouput: https://github.com/user-attachments/assets/0b61f005-861c-498c-9fac-b4ef796780a0
+
