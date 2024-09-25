@@ -8,7 +8,7 @@ This folder consists various frontend projects with collaboration of different 3
 
 # Angular
 
-- Search input with asynchronous loading indicator and deboucing with receiving distinct input only [Here](https://github.com/MandaliyaPruthvi/frontend-projects/tree/master/angular/concepts/src/app/screens/search-screen)
+- Search input with asynchronous loading indicator and deboucing with receiving distinct input only [Here](https://github.com/MandaliyaPruthvi/frontend-projects/tree/master/angular/concepts)
 
 # React
 
