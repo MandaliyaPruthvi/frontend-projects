@@ -4,4 +4,4 @@ It contains frontend projects in Angular framework. Angular is an open-source Ja
 
 ## Current project list: 
 
-- Search input with asynchronous loading indicator and deboucing with receiving distinct input only (Coming soon)
+- Search input with asynchronous loading indicator and deboucing with receiving distinct input only [Here](https://github.com/MandaliyaPruthvi/frontend-projects/tree/master/angular/concepts/src/app/screens/search-screen)
