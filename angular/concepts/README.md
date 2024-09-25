@@ -1,6 +1,7 @@
 # SearchInput
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 18.0.4.
+This project has various POC's for the complex concepts and their solution
 
 ## Development server
 
@@ -25,3 +26,8 @@ Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To u
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+
+## Concepts
+
+- Search input with asynchronous loading indicator and deboucing with receiving distinct input only [Here](https://github.com/MandaliyaPruthvi/frontend-projects/tree/master/angular/concepts/src/app/screens/search-screen)
+
