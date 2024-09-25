@@ -1,0 +1,16 @@
+<h2>Search input example</h2>
+
+<div class="container">
+    <p class="label">Search Input</p>
+    <input name="search-input" id="search-input" type="text" (input)="onSearchInputChange($event)"
+        placeholder="Enter your query" class="search-input"/>
+
+</div>
+
+@if (getLoading() | async) {
+<p>Loading...</p>
+} @else if(!(getLoading() | async) && searchedData !== '') {
+    <h3>
+        Searched Result: {{searchedData}}
+    </h3>
+}

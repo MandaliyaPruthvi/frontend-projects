@@ -1,0 +1,15 @@
+.container {
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    gap: 16px;
+}
+.label {
+    font-weight: 600;
+}
+.search-input {
+    border-radius: 6px;
+    padding-left: 8px;
+    color: black;
+    font-weight: 600;
+}
