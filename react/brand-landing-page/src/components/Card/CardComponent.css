@@ -1,0 +1,92 @@
+.card_container {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.card_wrapper {
+  display: flex;
+  flex-direction: column;
+  flex: 1 1 calc(33.333% - 20px);
+  background-color: #f9f9f9;
+  border-radius: 16px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: left;
+}
+
+.card_popular_wrapper {
+  background-color: #143d63cf;
+  padding: 1.5rem;
+  border-top-right-radius: 8px;
+  border-top-left-radius: 8px;
+}
+
+.card_popular_text {
+  color: white;
+  text-align: center;
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.card_header_wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  background-color: #1d2a37cf;
+  padding: 1.5rem;
+  color: white;
+}
+
+.card_header_title {
+  text-transform: capitalize;
+}
+
+.card_image_wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.card_content_wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.card_content_list {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  padding: 3rem;
+  align-items: baseline;
+}
+
+.card_content_list_item {
+  font-weight: 500;
+  font-size: 1.4rem;
+  font-family: sans-serif;
+  text-transform: capitalize;
+}
+
+.card_footer_wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  text-transform: capitalize;
+
+  background-color: #1d2a37cf;
+  padding: 1.5rem;
+  color: white;
+  border-bottom-right-radius: 8px;
+  border-bottom-left-radius: 8px;
+}
+
+.card_top_radius_border {
+  border-top-right-radius: 8px;
+  border-top-left-radius: 8px;
+}
+
+.card_container_popular_border {
+  border: 3px solid #143d63;
+  border-radius: 16px;
+}

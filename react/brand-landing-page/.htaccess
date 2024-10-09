@@ -1,0 +1,24 @@
+## RewriteBase /
+#RewriteRule ^index\.html$ - [L]
+ #RewriteCond %{REQUEST_FILENAME} !-f
+ #RewriteCond %{REQUEST_FILENAME} !-d
+#RewriteRule . /index.html [L]
+
+# RewriteBase /
+# RewriteRule ^index\.html$ - [L]
+#  RewriteCond %{REQUEST_FILENAME} !-f
+#  RewriteCond %{REQUEST_FILENAME} !-d
+# RewriteRule . /index.html [L]
+
+# Handle the React frontend (SPA)
+RewriteBase /
+RewriteRule ^index\.html$ - [L]
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(?!node_application)(.*)$ /index.html [L]
+
+# Handle Node.js backend routing for /node_application
+RewriteCond %{REQUEST_URI} ^/node_application
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^node_application/(.*)$ http://localhost:3000/$1 [P,L]
