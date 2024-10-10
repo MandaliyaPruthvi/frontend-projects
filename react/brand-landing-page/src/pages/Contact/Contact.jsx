@@ -50,7 +50,7 @@ const ContactElement = () => {
         const validationErrors = validate();
         if (Object.keys(validationErrors).length === 0) {
             try {
-                const response = await fetch('https://iraninout.com/node_application/api/users', {
+                const response = await fetch('https://mywebsite.com/node_application/api/users', {
                     // const response = await fetch('http://localhost:3000/api/users', {
                     method: 'POST',
                     headers: {

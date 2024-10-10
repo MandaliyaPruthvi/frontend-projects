@@ -19,7 +19,7 @@ const VerifyToken = () => {
     try {
       // const response = await fetch(`http://localhost:3000/api/verify-email?token=${token}`, {
       const response = await fetch(
-        `https://iraninout.com/node_application/api/verify-email?token=${token}`,
+        `https://mywebsite.com/node_application/api/verify-email?token=${token}`,
         {
           method: "GET",
           headers: {
