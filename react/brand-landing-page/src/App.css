@@ -69,4 +69,16 @@ body {
     gap: 5px;
     font-weight: bolder;
   }
+
+  .social-media {
+    height: 6vh;
+    background-color: #728ead7e;
+    /* background-color: #a8bdda77; */
+    color: #1d2a37cf;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 5px 1rem;
+    justify-content: space-between;
+  }
 }
