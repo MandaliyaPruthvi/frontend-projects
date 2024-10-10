@@ -105,7 +105,7 @@ const Home = () => {
                             <img className="home_container_child" src={base_image} alt="base_image" />
                             <div className="home_container_child_1">
                                 <h1>{t('home_title')}</h1>
-                                <p style={{ fontSize: 20, lineHeight: 1.5, lineBreak: 2, marginVertical: "auto" }}>Are you facing challenges accessing essential online services in
+                                <p style={{ fontSize: 20, lineHeight: 1.5, lineBreak: 2, marginVertical: "auto" }}>
                                     {t('home_description')}</p>
                                 <p style={{ fontSize: 20, lineHeight: 1.5, lineBreak: 2, marginVertical: "auto" }}>{t('home_description_2')}</p>
                             </div>

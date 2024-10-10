@@ -30,16 +30,16 @@ const ContactElement = () => {
     const validate = () => {
         const newErrors = {};
         if (!formData.firstName.trim()) {
-            newErrors.firstName = 'First name is required';
+            newErrors.firstName = t('contact_us_first_name_error');
         }
         if (!formData.lastName.trim()) {
-            newErrors.lastName = 'Last name is required';
+            newErrors.lastName = t('contact_us_last_name_error');
         }
         if (!phoneRegex.test(formData.contactNumber)) {
-            newErrors.contactNumber = 'Contact number must be 10 digits';
+            newErrors.contactNumber = t('contact_us_contact_number_error');
         }
         if (!emailRegex.test(formData.email)) {
-            newErrors.email = 'Please enter a valid email address';
+            newErrors.email = t('contact_us_email_error');
         }
         return newErrors;
     };
@@ -69,7 +69,7 @@ const ContactElement = () => {
                         contactNumber: '',
                         email: ''
                     });
-                    alert('Form submitted successfully!');
+                    alert(t('contact_form_submited'));
                 } else {
                     setLoading(false);
                     setErrors({ ...errors, ...{ apiError: `Error: ${data.message}` } });
@@ -87,7 +87,7 @@ const ContactElement = () => {
     return (
         <Element name="contacts_element" className="contacts_element">
             <div className="container">
-                <h2>Contact Us</h2>
+                <h2>{t('contact_us_title')}</h2>
                 {loading ? <Loader /> : (
                     <form onSubmit={handleSubmit} noValidate>
                         <div className="form-group">

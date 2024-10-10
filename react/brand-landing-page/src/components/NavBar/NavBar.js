@@ -1,10 +1,11 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 
 import "../NavBar/NavBar.css";
 
 import { NavLink } from "react-router-dom";
 import { Link } from "react-scroll";
 import { CiFacebook, CiPhone, CiInstagram, CiMail } from "react-icons/ci";
+import { useTranslation } from "react-i18next";
 
 import logo from "../../assets/myAgency.png";
 import { HamburgetMenuClose, HamburgetMenuOpen } from "../Icons";
@@ -12,6 +13,7 @@ import useScreenSize from "../../hooks/useScreenSize";
 import LanguageSwitcher from "../LanguageSwitcher/LanguageSwitcher";
 
 function NavBar() {
+  const { t } = useTranslation();
   const [click, setClick] = useState(false);
   const handleClick = () => {
     console.log("Testing");
@@ -31,9 +33,19 @@ function NavBar() {
     { title: "French", code: "fr" },
     { title: "German", code: "gb" },
     { title: "Italian", code: "it" },
-    { title: "Persian", code: "pr" },
-    { title: "Spanish", code: "sp" },
+    { title: "Español", code: "sp" },
   ];
+
+  useEffect(() => {
+    window.onbeforeunload = function () {
+      localStorage.setItem("language", "en");
+      return true;
+    };
+
+    return () => {
+      window.onbeforeunload = null;
+    };
+  }, []);
 
   return (
     <>
@@ -45,7 +57,7 @@ function NavBar() {
           <CiPhone />
         </div>
         <div className="language-item">
-          <span className="language_label">Language:</span>
+          <span className="language_label">{t("nav_bar_language")}</span>
           <LanguageSwitcher items={dropdownItems} />
         </div>
       </div>
@@ -70,9 +82,11 @@ function NavBar() {
                 onSetActive={handleSetActive}
               >
                 {windowWidth > 750 ? (
-                  "Home"
+                  t("sections_1_display_name")
                 ) : (
-                  <div onClick={handleClick}>Home</div>
+                  <div onClick={handleClick}>
+                    {t("sections_1_display_name")}
+                  </div>
                 )}
               </Link>
             </li>
@@ -91,9 +105,11 @@ function NavBar() {
                 onSetActive={handleClick}
               >
                 {windowWidth > 750 ? (
-                  "Services"
+                  t("sections_2_display_name")
                 ) : (
-                  <div onClick={handleClick}>Services</div>
+                  <div onClick={handleClick}>
+                    {t("sections_2_display_name")}
+                  </div>
                 )}
               </Link>
             </li>
@@ -112,9 +128,11 @@ function NavBar() {
                 onSetActive={handleClick}
               >
                 {windowWidth > 750 ? (
-                  "Contact Us"
+                  t("sections_3_display_name")
                 ) : (
-                  <div onClick={handleClick}>Contact Us</div>
+                  <div onClick={handleClick}>
+                    {t("sections_3_display_name")}
+                  </div>
                 )}
               </Link>
             </li>
@@ -133,9 +151,11 @@ function NavBar() {
                 onSetActive={handleClick}
               >
                 {windowWidth > 750 ? (
-                  "Pricing"
+                  t("sections_4_display_name")
                 ) : (
-                  <div onClick={handleClick}>Pricing</div>
+                  <div onClick={handleClick}>
+                    {t("sections_4_display_name")}
+                  </div>
                 )}
               </Link>
             </li>
@@ -154,9 +174,11 @@ function NavBar() {
                 onSetActive={handleClick}
               >
                 {windowWidth > 750 ? (
-                  "About Us"
+                  t("sections_5_display_name")
                 ) : (
-                  <div onClick={handleClick}>About Us</div>
+                  <div onClick={handleClick}>
+                    {t("sections_5_display_name")}
+                  </div>
                 )}
               </Link>
             </li>
@@ -175,9 +197,11 @@ function NavBar() {
                 onSetActive={handleClick}
               >
                 {windowWidth > 750 ? (
-                  "Testimonials"
+                  t("sections_6_display_name")
                 ) : (
-                  <div onClick={handleClick}>Testimonials</div>
+                  <div onClick={handleClick}>
+                    {t("sections_6_display_name")}
+                  </div>
                 )}
               </Link>
             </li>

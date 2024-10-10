@@ -1,6 +1,9 @@
 import React from "react";
+import { useTranslation } from 'react-i18next';
 
 const PageNotFound = () => {
+    const { t } = useTranslation(); // Get translation function
+
     return (
         <div
             style={{
@@ -10,7 +13,7 @@ const PageNotFound = () => {
             }}
         >
             <h1>
-                This is Page not found page
+                {t('page_not_found')}
             </h1>
         </div>
     );

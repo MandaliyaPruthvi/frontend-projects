@@ -29,7 +29,7 @@
   flex-direction: column;
   gap: 25px;
   padding: 2rem;
-  margin-top: 5%;
+  /* margin-top: 5%; */
 }
 @media screen and (max-width: 920px) {
   .home_container {

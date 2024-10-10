@@ -4,10 +4,9 @@ import { initReactI18next } from 'react-i18next';
 // Import translation files for each language
 import enTranslation from './locale/en.json';
 import frTranslation from './locale/fr.json';
-// import deTranslation from './locale/de.json';
-// import itTranslation from './locale/it.json';
-// import faTranslation from './locale/fa.json';
-// import esTranslation from './locale/es.json';
+import gbTranslation from './locale/gb.json';
+import itTranslation from './locale/it.json';
+import spTranslation from './locale/sp.json';
 
 i18n
   .use(initReactI18next) // Passes i18n instance to react-i18next
@@ -15,10 +14,9 @@ i18n
     resources: {
       en: { translation: enTranslation },
       fr: { translation: frTranslation },
-    //   de: { translation: deTranslation },
-    //   it: { translation: itTranslation },
-    //   fa: { translation: faTranslation },
-    //   es: { translation: esTranslation },
+      gb: { translation: gbTranslation },
+      it: { translation: itTranslation },
+      sp: { translation: spTranslation },
     },
     lng: 'en', // Default language
     fallbackLng: 'en', // Fallback language if translation is missing

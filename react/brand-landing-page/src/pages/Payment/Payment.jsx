@@ -11,35 +11,34 @@ const PaymentElement = () => {
     return (
         <Element name="payments_element" className="payments_element">
             <h1 style={{ marginTop: 10, display: 'flex', flexDirection: 'row', justifyContent: 'center', alignItems: 'center' }}>
-                {/* {t('payment_title')} */}
-                Pricing
+                {t('payment_title')}
             </h1>
             <div className="payments_container">
 
 
                 <CardComponent
                     header={{ title: "service 1" }}
-                    contentList={["best service", "quick availability", "high customer support", "valid aquisition", "easy refund"]}
-                    footer="Price: 100 R"
+                    contentList={[t('pricing_service_one'), t('pricing_service_two'), t('pricing_service_three'), t('pricing_service_four'), t('pricing_service_five')]}
+                    footer={t('pricing_price_value')}
                 />
 
                 <CardComponent
                     header={{ title: "service 2" }}
-                    contentList={["best service", "quick availability", "high customer support", "valid aquisition", "easy refund"]}
-                    footer="Price: 100 R"
+                    contentList={[t('pricing_service_one'), t('pricing_service_two'), t('pricing_service_three'), t('pricing_service_four'), t('pricing_service_five')]}
+                    footer={t('pricing_price_value')}
                     popular
                 />
 
                 <CardComponent
                     header={{ title: "service 3" }}
-                    contentList={["best service", "quick availability", "high customer support", "valid aquisition", "easy refund"]}
-                    footer="Price: 100 R"
+                    contentList={[t('pricing_service_one'), t('pricing_service_two'), t('pricing_service_three'), t('pricing_service_four'), t('pricing_service_five')]}
+                    footer={t('pricing_price_value')}
                 />
 
                 <CardComponent
                     header={{ title: "service 4" }}
-                    contentList={["best service", "quick availability", "high customer support", "valid aquisition", "easy refund"]}
-                    footer="Price: 100 R"
+                    contentList={[t('pricing_service_one'), t('pricing_service_two'), t('pricing_service_three'), t('pricing_service_four'), t('pricing_service_five')]}
+                    footer={t('pricing_price_value')}
                 />
             </div>
         </Element>
