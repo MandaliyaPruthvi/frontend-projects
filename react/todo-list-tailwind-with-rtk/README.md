@@ -8,7 +8,7 @@ Download from here: https://nodejs.org/en/download
 
 ## Goto To-Do List project
 ```
-cd frontend-projects/react/todo-list-tailwind
+cd frontend-projects/react/todo-list-tailwind-with-rtk
 ```
 
 ## To install and configure tailwind.css follow this section

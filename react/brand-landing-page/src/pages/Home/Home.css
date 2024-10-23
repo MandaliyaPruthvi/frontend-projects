@@ -1,5 +1,7 @@
 .home_element {
-  padding: 3rem;
+  /* padding: 3rem; */
+  padding: 3rem 1rem 3rem 0.5rem;
+
 }
 
 .content {
@@ -65,7 +67,7 @@
 
   .about_element {
     width: 100%;
-    margin-bottom: 100px;
+    /* margin-bottom: 100px; */
   }
   .home_container {
     display: flex;
